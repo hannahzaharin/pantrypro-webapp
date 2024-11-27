@@ -1,0 +1,473 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links > li {
+    position: relative;
+    margin-right: 20px; /* Space between menu items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px;
+    color: #333; /* Text color */
+}
+
+.dropdown-content {
+    display: none; /* Hide by default */
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+    z-index: 1;
+    min-width: 160px;
+    top: 100%; /* Position it below the link */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.btn-primary {
+    background-color: #A8D5BA;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+/* Cooking Methods Dropdown Styles */
+.hero-content {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0fff0;
+}
+
+.hero-content select {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.hero-content select:hover, 
+.hero-content select:focus {
+    border-color: #A8D5BA;
+    outline: none;
+}
+
+.hero-content label {
+    font-weight: 500;
+    color: #A8D5BA;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    color: #A8D5BA;
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.hero-content input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.hero-content button {
+    background-color: #A8D5BA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #A8D5BA;
+}
+
+
+/* Loading Spinner */
+.spinner {
+    display: none;
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #A8D5BA;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Features Section */
+.features-section {
+    padding: 50px 20px;
+    background-color: #f0fff0;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 2rem;
+    color: #A8D5BA;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    flex: 1;
+    max-width: 250px;
+    padding: 20px;
+}
+
+.feature-item img {
+    width: 50px;
+}
+
+.feature-item p {
+    color: #A8D5BA;
+    font-size: 1.1rem;
+}
+
+/* Recipe Section */
+.recipe-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.recipe-section h2 {
+    font-size: 2rem;
+    color: #A8D5BA;
+    margin-bottom: 40px;
+}
+
+.recipe-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.recipe-card {
+    flex: 1;
+    max-width: 250px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #e0f5e0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.how-it-works ol {
+    list-style-type: decimal;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Community Section */
+.community-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.community-section h2 {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.community-section input[type="email"] {
+    padding: 10px;
+    border: 2px solid #2e7d32;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.community-section button {
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.community-section button:hover {
+    background-color: #1e5631;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #A8D5BA;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: rgb(215, 245, 215);
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+
+button {
+    background-color:#A8D5BA; /* Change to pink */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; /* Ensure text is visible */
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ffccff; /* Darker shade of pink for hover effect */
+}
+
+
+h3 {
+    margin-top: 20px;
+}
+
+.saved-recipes-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.saved-recipes-list li {
+    background-color: #ffccff; /* Light pink background for saved recipes */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input#recipeInput {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button#saveRecipeButton {
+    background-color: #ffccff; /* Pink background for the button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#saveRecipeButton:hover {
+    background-color: #ffccff; /* Darker pink on hover */
+}
+
+
+.btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background-color: #A8D5BA;
+    color: #fff;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.btn-primary {
+    background-color: #A8D5BA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #A8D5BA;
+}
+
